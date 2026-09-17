@@ -1,9 +1,12 @@
 import { Component } from '@angular/core';
+import { SocialLinks } from '../../shared/components/social-links/social-links';
 
 @Component({
-  imports: [],
   selector: 'app-footer',
-  styleUrl: './footer.css',
+  imports: [SocialLinks],
   templateUrl: './footer.html',
+  styleUrl: './footer.css',
 })
-export class Footer {}
+export class Footer {
+  readonly currentYear = new Date().getFullYear();
+}

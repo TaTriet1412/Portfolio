@@ -1,1 +1,66 @@
-<p>skills works!</p>
+<section id="skills" class="py-20 border-t border-slate-800/60">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
+
+    <app-section-title index="03" tag="tech_stack" title="Kỹ năng &amp; Công nghệ"
+      subtitle="Hệ sinh thái công nghệ được phân loại theo trách nhiệm hệ thống: Backend Core, Database & Caching, Frontend và DevOps." />
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      @for (group of skillGroups(); track group.category) {
+      <div
+        class="p-6 rounded-xl bg-slate-900/80 border border-slate-800 hover:border-cyan-500/30 transition-all duration-300 flex flex-col justify-between">
+        <div>
+          <!-- Group Header -->
+          <div class="flex items-start justify-between gap-4 mb-3">
+            <div>
+              <h3 class="text-lg font-bold text-slate-100 flex items-center gap-2">
+                <span class="text-cyan-400 font-mono text-base">#</span>
+                {{ group.title }}
+              </h3>
+              <p class="text-xs font-mono text-slate-400 mt-1">
+                // {{ group.subtitle }}
+              </p>
+            </div>
+            <span
+              class="text-xs font-mono text-cyan-400 bg-slate-950 px-2 py-1 rounded border border-slate-800 uppercase">
+              {{ group.category }}
+            </span>
+          </div>
+
+          <!-- Skills Badges & Level Grid -->
+          <div class="space-y-2.5 mt-5">
+            @for (skill of group.skills; track skill.name) {
+            <div
+              class="flex items-center justify-between p-2 rounded-lg bg-slate-950/50 border border-slate-800/60 hover:border-slate-700 transition-colors">
+              <div class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full" [class.bg-cyan-400]="skill.highlight"
+                  [class.bg-slate-600]="!skill.highlight"></span>
+                <span class="text-xs sm:text-sm font-mono font-medium text-slate-200">
+                  {{ skill.name }}
+                </span>
+              </div>
+
+              <div class="flex items-center gap-2">
+                @if (skill.yearsOrExp) {
+                <span class="text-[10px] font-mono text-slate-400 hidden sm:inline-block">
+                  {{ skill.yearsOrExp }}
+                </span>
+                }
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded font-medium"
+                  [class.bg-cyan-950]="skill.proficiency === 'Expert'"
+                  [class.text-cyan-300]="skill.proficiency === 'Expert'" [class.border]="skill.proficiency === 'Expert'"
+                  [class.border-cyan-500/30]="skill.proficiency === 'Expert'"
+                  [class.bg-slate-800]="skill.proficiency !== 'Expert'"
+                  [class.text-slate-400]="skill.proficiency !== 'Expert'">
+                  {{ skill.proficiency }}
+                </span>
+              </div>
+            </div>
+            }
+          </div>
+        </div>
+      </div>
+      }
+    </div>
+
+  </div>
+</section>

@@ -31,3 +31,35 @@ This is a professional Developer Portfolio web application built to showcase tec
 3. **TypeScript & Data Handling:**
    - Strictly type all data structures in the `models/` folder. For instance, a `Project` must have attributes like `title`, `description`, `techStack` (array of strings), `githubLink`, and `demoLink`.
    - Use Angular Signals (`signal()`, `computed()`) to manage state, especially for features like the active section in the Navbar or the currently selected project filter.
+
+src/
+└── app/
+    ├── core/
+    │   ├── interceptors/
+    │   └── services/
+    │       ├── seo.service.ts
+    │       └── theme.service.ts
+    ├── data/
+    │   └── mock-data.ts
+    ├── features/
+    │   ├── about/
+    │   ├── contact/
+    │   ├── experience/
+    │   ├── home/
+    │   ├── projects/
+    │   └── skills/
+    ├── layouts/
+    │   ├── footer/
+    │   ├── main-layout/
+    │   └── navbar/
+    ├── models/
+    │   ├── experience.model.ts
+    │   ├── project.model.ts
+    │   └── skill.model.ts
+    └── shared/
+        └── components/
+            ├── project-card/
+            ├── section-title/
+            ├── social-links/
+            ├── tech-badge/
+            └── timeline-item/

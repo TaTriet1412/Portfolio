@@ -1,9 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { PortfolioService } from '../../core/services/portfolio.service';
+import { SectionTitle } from '../../shared/components/section-title/section-title';
 
 @Component({
-  imports: [],
   selector: 'app-skills',
-  styleUrl: './skills.css',
+  imports: [SectionTitle],
   templateUrl: './skills.html',
+  styleUrl: './skills.css',
 })
-export class Skills {}
+export class Skills {
+  private readonly portfolioService = inject(PortfolioService);
+  readonly skillGroups = this.portfolioService.skillGroups;
+  readonly uiText = this.portfolioService.uiText;
+}

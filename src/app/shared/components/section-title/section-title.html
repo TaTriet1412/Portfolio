@@ -1,1 +1,16 @@
-<p>section-title works!</p>
+<div class="mb-12">
+  <div class="flex items-center gap-3 mb-2">
+    <span class="font-mono text-xs text-cyan-400 font-semibold tracking-wider uppercase px-2.5 py-1 rounded bg-cyan-950/60 border border-cyan-500/20">
+      // {{ index() }}. &lt;{{ tag() || 'section' }}&gt;
+    </span>
+    <div class="h-px bg-gradient-to-r from-cyan-500/40 via-slate-700/40 to-transparent flex-1 max-w-xs"></div>
+  </div>
+  <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-100 tracking-tight flex items-center gap-3">
+    {{ title() }}
+  </h2>
+  @if (subtitle()) {
+    <p class="mt-2 text-slate-400 text-sm sm:text-base max-w-2xl font-normal leading-relaxed">
+      {{ subtitle() }}
+    </p>
+  }
+</div>

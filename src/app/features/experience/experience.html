@@ -1,1 +1,14 @@
-<p>experience works!</p>
+<section id="experience" class="py-20 border-t border-slate-800/60">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
+
+    <app-section-title index="04" tag="career_path" title="Kinh nghiệm &amp; Lộ trình"
+      subtitle="Quá trình thực tập phát triển hệ thống backend, nghiên cứu học thuật và hiện thực hóa các giải pháp phần mềm." />
+
+    <div class="mt-8">
+      @for (item of experiences(); track item.id; let last = $last) {
+      <app-timeline-item [item]="item" [isLast]="last" />
+      }
+    </div>
+
+  </div>
+</section>

@@ -1,9 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
+import { ExperienceItem } from '../../../models/experience.model';
+import { TechBadge } from '../tech-badge/tech-badge';
 
 @Component({
-  imports: [],
   selector: 'app-timeline-item',
-  styleUrl: './timeline-item.css',
+  imports: [TechBadge],
   templateUrl: './timeline-item.html',
+  styleUrl: './timeline-item.css',
 })
-export class TimelineItem {}
+export class TimelineItem {
+  item = input.required<ExperienceItem>();
+  isLast = input<boolean>(false);
+}

@@ -1,9 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
 
 @Component({
-  imports: [],
   selector: 'app-tech-badge',
-  styleUrl: './tech-badge.css',
+  imports: [],
   templateUrl: './tech-badge.html',
+  styleUrl: './tech-badge.css',
 })
-export class TechBadge {}
+export class TechBadge {
+  name = input.required<string>();
+  variant = input<'cyan' | 'slate' | 'emerald' | 'amber'>('slate');
+  highlight = input<boolean>(false);
+  size = input<'sm' | 'md'>('md');
+}

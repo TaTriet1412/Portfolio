@@ -1,1 +1,40 @@
-<p>projects works!</p>
+<section id="projects" class="py-20 border-t border-slate-800/60">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
+
+    <app-section-title index="05" tag="featured_projects" title="Dự án Tiêu biểu"
+      subtitle="Các hệ thống backend phân tán, kiến trúc Spring Boot tối ưu hiệu năng và các ứng dụng Full-stack kết hợp Angular." />
+
+    <!-- Filter Buttons with Monospace Styling -->
+    <div class="flex flex-wrap items-center gap-2 mb-10 pb-4 border-b border-slate-800/80">
+      <span class="text-xs font-mono text-slate-500 mr-2">Bộ lọc:</span>
+      @for (opt of filterOptions; track opt.value) {
+      <button type="button" (click)="setFilter(opt.value)"
+        class="px-3.5 py-1.5 rounded-lg text-xs font-mono transition-all duration-200"
+        [class.bg-cyan-500]="currentFilter() === opt.value" [class.text-slate-950]="currentFilter() === opt.value"
+        [class.font-bold]="currentFilter() === opt.value"
+        [class.shadow-[0_0_12px_rgba(6,182,212,0.3)]]="currentFilter() === opt.value"
+        [class.bg-slate-900]="currentFilter() !== opt.value" [class.text-slate-400]="currentFilter() !== opt.value"
+        [class.border]="currentFilter() !== opt.value" [class.border-slate-800]="currentFilter() !== opt.value"
+        [class.hover:border-slate-600]="currentFilter() !== opt.value"
+        [class.hover:text-slate-200]="currentFilter() !== opt.value">
+        {{ opt.label }}
+      </button>
+      }
+    </div>
+
+    <!-- Projects Grid -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      @for (proj of projects(); track proj.id) {
+      <app-project-card [project]="proj" />
+      }
+    </div>
+
+    <!-- Empty State -->
+    @if (projects().length === 0) {
+    <div class="p-12 text-center rounded-xl bg-slate-950 border border-slate-800 font-mono text-sm text-slate-500">
+      <span class="text-cyan-400 font-semibold">[INFO]</span> Không có dự án nào khớp với tiêu chí lọc hiện tại.
+    </div>
+    }
+
+  </div>
+</section>
