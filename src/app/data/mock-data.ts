@@ -42,11 +42,11 @@ export interface UiText {
     readingListening: string;
     speaking: string;
     writing: string;
-    ongoingSlotBadge: string;
-    ongoingTitle: string;
-    ongoingStatus: string;
-    ongoingDesc: string;
-    awaitingText: string;
+    certBadge: string;
+    certTitle: string;
+    certIssuer: string;
+    certDesc: string;
+    certDate: string;
   };
   skills: {
     title: string;
@@ -128,23 +128,23 @@ export const UI_TEXT_VI: UiText = {
       'Zero-Downtime, Fault-Tolerant & Cache-First Architecture',
       'Khả năng đọc và tài liệu hóa chuẩn quốc tế bằng tiếng Anh',
     ],
-    educationTitle: 'Học vấn (Education)',
-    educationPeriod: '2021 - 2025',
-    degree: 'Kỹ thuật Phần mềm (Software Engineering)',
+    educationTitle: 'Học vấn',
+    educationPeriod: '2022 - 2026',
+    degree: 'Kỹ thuật Phần mềm',
     major: 'Đại học chuyên ngành Công nghệ Thông tin',
     educationDesc: 'Tập trung chuyên sâu vào Cấu trúc Dữ liệu & Giải thuật, Hệ thống Phân tán, Thiết kế Hệ thống Hướng đối tượng và Quản trị Cơ sở Dữ liệu Nâng cao.',
     achievementsTitle: '// Chứng chỉ & Thành tích',
-    verifiedBadge: 'Chứng chỉ Đã xác minh',
+    verifiedBadge: 'Chứng chỉ còn hiệu lực',
     toeicSub: 'Trình độ: Tương đương CEFR B2 Độc lập',
     toeicDesc: 'Đủ năng lực đọc hiểu tài liệu kỹ thuật chuyên sâu, giao tiếp và viết báo cáo kiến trúc dự án hoàn toàn bằng tiếng Anh trong môi trường quốc tế.',
     readingListening: 'Reading & Listening',
     speaking: 'Speaking',
     writing: 'Writing',
-    ongoingSlotBadge: 'Slot [02] :: Ongoing Milestone',
-    ongoingTitle: 'Chứng chỉ Chuyên môn / System Milestone',
-    ongoingStatus: '// Trạng thái: Đang chuẩn bị & Tạm để trống',
-    ongoingDesc: 'Vị trí dành cho chứng chỉ chuyên môn tiếp theo (như AWS Certified Solutions Architect hoặc Java SE Developer) đang trong lộ trình ôn luyện và kiểm chứng.',
-    awaitingText: '[Đang chờ cập nhật mốc chứng chỉ tiếp theo...]',
+    certBadge: 'Chứng chỉ còn hiệu lực',
+    certTitle: 'Agile Development & Scrum Framework',
+    certIssuer: 'TECHBASE',
+    certDesc: 'Hoàn thành khóa học Agile Development & Scrum Framework tại Đại học Tôn Đức Thắng.',
+    certDate: '16/04/2024',
   },
   skills: {
     title: 'Kỹ năng & Công nghệ',
@@ -232,7 +232,7 @@ export const UI_TEXT_EN: UiText = {
       'Technical documentation and communication in fluent English',
     ],
     educationTitle: 'Education',
-    educationPeriod: '2021 - 2025',
+    educationPeriod: '2022 - 2026',
     degree: 'Bachelor of Software Engineering',
     major: 'Computer Science / Information Technology',
     educationDesc: 'In-depth focus on Data Structures & Algorithms, Distributed Systems, Object-Oriented System Design, and Advanced Database Management.',
@@ -243,11 +243,11 @@ export const UI_TEXT_EN: UiText = {
     readingListening: 'Reading & Listening',
     speaking: 'Speaking',
     writing: 'Writing',
-    ongoingSlotBadge: 'Slot [02] :: Ongoing Milestone',
-    ongoingTitle: 'Professional Certification / System Milestone',
-    ongoingStatus: '// Status: In Progress & Reserved Slot',
-    ongoingDesc: 'Reserved slot for ongoing technical milestones (such as AWS Certified Solutions Architect or Java SE Developer certification).',
-    awaitingText: '[Awaiting next certification completion...]',
+    certBadge: 'Verified Certificate',
+    certTitle: 'Agile Development & Scrum Framework',
+    certIssuer: 'TECHBASE',
+    certDesc: 'Completed the Agile Development & Scrum Framework course at Ton Duc Thang University.',
+    certDate: '16/04/2024',
   },
   skills: {
     title: 'Skills & Technologies',
@@ -364,19 +364,19 @@ export const ACHIEVEMENTS_VI: AchievementItem[] = [
       'Thành thạo đọc hiểu tài liệu kỹ thuật chuyên sâu, giao tiếp chuyên môn và thuyết trình giải pháp hệ thống bằng tiếng Anh.'
   },
   {
-    id: 'upcoming-cert',
-    title: 'Chứng chỉ Chuyên môn / System Milestone',
+    id: 'techbase-agile',
+    title: 'Agile Development & Scrum Framework',
     category: 'Certification',
-    badge: 'Đang chuẩn bị / Sắp tới',
-    issuerOrYear: 'Mục tiêu 2025',
-    status: 'in_progress',
+    badge: 'TECHBASE',
+    issuerOrYear: 'Ton Duc Thang University - 04/2024',
+    status: 'verified',
     scoreBreakdown: [
-      { label: 'Trạng thái', score: 'Đang trong lộ trình' },
-      { label: 'Định hướng', score: 'Cloud & Distributed Architecture' }
+      { label: 'Khung phương pháp', score: 'Agile & Scrum' },
+      { label: 'Tổ chức', score: 'TECHBASE' }
     ],
-    levelEquivalent: 'Cloud Native & System Standards',
+    levelEquivalent: 'Agile Practitioner',
     description:
-      'Đang chuẩn bị cho các tiêu chuẩn triển khai cloud-native doanh nghiệp, điều phối container và hạ tầng backend có độ khả dụng cao.'
+      'Hoàn thành khóa học Agile Development & Scrum Framework tại Đại học Tôn Đức Thắng, ngày 16/04/2024.'
   }
 ];
 
@@ -398,19 +398,19 @@ export const ACHIEVEMENTS_EN: AchievementItem[] = [
       'High-proficiency working fluency in technical English documentation, cross-border engineering communication, and presentation of technical solutions.'
   },
   {
-    id: 'upcoming-cert',
-    title: 'Cloud & System Engineering Milestone',
+    id: 'techbase-agile',
+    title: 'Agile Development & Scrum Framework',
     category: 'Certification',
-    badge: 'In Progress / Upcoming',
-    issuerOrYear: 'Target 2025',
-    status: 'in_progress',
+    badge: 'TECHBASE',
+    issuerOrYear: 'Ton Duc Thang University - 04/2024',
+    status: 'verified',
     scoreBreakdown: [
-      { label: 'Status', score: 'Ongoing Milestone' },
-      { label: 'Focus', score: 'Cloud & Distributed Architecture' }
+      { label: 'Methodology', score: 'Agile & Scrum' },
+      { label: 'Organization', score: 'TECHBASE' }
     ],
-    levelEquivalent: 'Targeting Cloud Native & Systems',
+    levelEquivalent: 'Agile Practitioner',
     description:
-      'Currently preparing for enterprise cloud-native deployment standards, container orchestration, and high-availability backend infrastructures.'
+      'Completed the Agile Development & Scrum Framework course at Ton Duc Thang University on April 16th, 2024.'
   }
 ];
 
@@ -737,7 +737,7 @@ export const EXPERIENCES_VI: ExperienceItem[] = [
     role: 'Cử nhân Kỹ thuật Phần mềm (Công nghệ Thông tin)',
     organization: 'Chương trình Đào tạo Đại học Chính quy',
     location: 'Việt Nam',
-    period: '2021 - 2025 (Dự kiến)',
+    period: '2022 - 2026',
     type: 'education',
     summary:
       'Chương trình đào tạo chuyên sâu về Phát triển Ứng dụng Doanh nghiệp, Hệ thống Phân tán, Quản trị Cơ sở Dữ liệu và Thiết kế Kiến trúc Phần mềm.',
@@ -746,7 +746,7 @@ export const EXPERIENCES_VI: ExperienceItem[] = [
       'Trưởng nhóm đồ án tốt nghiệp tập trung vào kiến trúc Microservices mở rộng cao và thuật toán đồng thuận phân tán.',
       'Tích cực tham gia các câu lạc bộ lập trình và chia sẻ kiến thức công nghệ.'
     ],
-    gpaOrScore: 'Xếp loại: Xuất sắc (Distinction)',
+    gpaOrScore: 'GPA: 8.34 / 10 — Xếp loại: Xuất sắc',
     techStack: ['Data Structures & Algorithms', 'Distributed Systems', 'Software Patterns', 'Database Optimization']
   }
 ];
@@ -774,7 +774,7 @@ export const EXPERIENCES_EN: ExperienceItem[] = [
     role: 'Bachelor of Software Engineering (Information Technology)',
     organization: 'University Degree Program',
     location: 'Vietnam',
-    period: '2021 - 2025 (Expected)',
+    period: '2022 - 2026',
     type: 'education',
     summary:
       'Dedicated curriculum specializing in Enterprise Application Development, Distributed Systems, Database Management, and Advanced Software Architectures.',
@@ -783,7 +783,7 @@ export const EXPERIENCES_EN: ExperienceItem[] = [
       'Led graduation capstone project focusing on high-scalability microservice architectures and distributed consensus.',
       'Active contributor in developer clubs and technical knowledge sharing sessions.'
     ],
-    gpaOrScore: 'Distinction / High Academic Standing',
+    gpaOrScore: 'GPA: 8.34 / 10 — Distinction',
     techStack: ['Data Structures & Algorithms', 'Distributed Systems', 'Software Patterns', 'Database Optimization']
   }
 ];

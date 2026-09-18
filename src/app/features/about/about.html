@@ -1,15 +1,10 @@
 <section id="about" class="py-20 border-t border-slate-800/60">
   <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
-    
-    <app-section-title
-      index="02"
-      tag="about_me"
-      [title]="uiText().about.title"
-      [subtitle]="uiText().about.subtitle"
-    />
+
+    <app-section-title index="02" tag="about_me" [title]="uiText().about.title" [subtitle]="uiText().about.subtitle" />
 
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
-      
+
       <!-- Left Column: Biography & Technical Mindset -->
       <div class="lg:col-span-7 space-y-6">
         <div class="p-6 sm:p-8 rounded-xl bg-slate-900/80 border border-slate-800">
@@ -28,13 +23,14 @@
             {{ uiText().about.p2 }}
           </p>
 
-          <div class="p-4 rounded-lg bg-slate-950/60 border border-slate-800/80 font-mono text-xs text-slate-400 space-y-2">
+          <div
+            class="p-4 rounded-lg bg-slate-950/60 border border-slate-800/80 font-mono text-xs text-slate-400 space-y-2">
             <div class="text-cyan-300 font-semibold">{{ uiText().about.principlesTitle }}</div>
             @for (item of uiText().about.principles; track item) {
-              <div class="flex items-center gap-2">
-                <span class="text-cyan-500">✔</span>
-                <span>{{ item }}</span>
-              </div>
+            <div class="flex items-center gap-2">
+              <span class="text-cyan-500">✔</span>
+              <span>{{ item }}</span>
+            </div>
             }
           </div>
         </div>
@@ -48,7 +44,8 @@
                 {{ uiText().about.educationTitle }}
               </h3>
             </div>
-            <span class="font-mono text-xs text-cyan-400 bg-cyan-950/80 px-2.5 py-0.5 rounded border border-cyan-500/30">
+            <span
+              class="font-mono text-xs text-cyan-400 bg-cyan-950/80 px-2.5 py-0.5 rounded border border-cyan-500/30">
               {{ uiText().about.educationPeriod }}
             </span>
           </div>
@@ -65,14 +62,9 @@
           </p>
 
           <div class="flex flex-wrap gap-2">
-            <span class="font-mono text-xs px-2.5 py-1 rounded bg-slate-950 text-slate-300 border border-slate-800">
-              GPA: Distinction / Xuất sắc
-            </span>
-            <span class="font-mono text-xs px-2.5 py-1 rounded bg-slate-950 text-slate-300 border border-slate-800">
-              Distributed Systems
-            </span>
-            <span class="font-mono text-xs px-2.5 py-1 rounded bg-slate-950 text-slate-300 border border-slate-800">
-              Advanced Database
+            <span
+              class="font-mono text-xs px-2.5 py-1 rounded bg-cyan-950/60 text-cyan-300 border border-cyan-500/30 font-semibold">
+              GPA: 8.34 / 10
             </span>
           </div>
         </div>
@@ -87,12 +79,14 @@
               {{ uiText().about.achievementsTitle }}
             </h3>
           </div>
-          
+
           <div class="space-y-4">
             <!-- Achievement 1: TOEIC 4 Skills (Verified) -->
-            <div class="p-6 rounded-xl bg-slate-900/90 border border-cyan-500/30 hover:border-cyan-400/60 shadow-[0_0_20px_rgba(6,182,212,0.08)] transition-all duration-300">
+            <div
+              class="p-6 rounded-xl bg-slate-900/90 border border-cyan-500/30 hover:border-cyan-400/60 shadow-[0_0_20px_rgba(6,182,212,0.08)] transition-all duration-300">
               <div class="flex items-center justify-between gap-2 mb-3">
-                <span class="font-mono text-xs text-emerald-400 bg-emerald-950/80 px-2.5 py-0.5 rounded border border-emerald-500/30 flex items-center gap-1.5">
+                <span
+                  class="font-mono text-xs text-emerald-400 bg-emerald-950/80 px-2.5 py-0.5 rounded border border-emerald-500/30 flex items-center gap-1.5">
                   <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
                   {{ uiText().about.verifiedBadge }}
                 </span>
@@ -110,10 +104,15 @@
 
               <!-- Detailed Score Breakdown -->
               <div class="grid grid-cols-2 gap-2.5 mb-4">
-                <div class="p-3 rounded-lg bg-slate-950/80 border border-slate-800 text-center col-span-2">
-                  <div class="text-[10px] font-mono text-slate-400 uppercase">{{ uiText().about.readingListening }}</div>
-                  <div class="text-lg sm:text-xl font-mono font-extrabold text-cyan-300 mt-0.5">
-                    880 <span class="text-xs text-slate-500 font-normal">/ 990</span>
+                <div
+                  class="p-4 rounded-lg bg-gradient-to-br from-cyan-950/80 to-slate-950/80 border border-cyan-500/40 text-center col-span-2 relative overflow-hidden">
+                  <div class="absolute inset-0 bg-cyan-400/5"></div>
+                  <div class="relative">
+                    <div class="text-[10px] font-mono text-cyan-400/80 uppercase tracking-widest mb-1">{{
+                      uiText().about.readingListening }}</div>
+                    <div class="text-3xl sm:text-4xl font-mono font-black text-cyan-300 tracking-tight">
+                      880 <span class="text-sm text-slate-500 font-normal">/ 990</span>
+                    </div>
                   </div>
                 </div>
                 <div class="p-2.5 rounded-lg bg-slate-950/80 border border-slate-800 text-center">
@@ -135,32 +134,38 @@
               </p>
             </div>
 
-            <!-- Achievement 2: Ongoing Milestone / Placeholder (As requested) -->
-            <div class="p-6 rounded-xl bg-slate-950/60 border-2 border-dashed border-slate-800 hover:border-slate-700 transition-all duration-300">
+            <!-- Achievement 2: TECHBASE Agile & Scrum Certificate -->
+            <div
+              class="p-6 rounded-xl bg-slate-900/90 border border-emerald-500/25 hover:border-emerald-400/50 transition-all duration-300">
               <div class="flex items-center justify-between gap-2 mb-3">
-                <span class="font-mono text-xs text-amber-400/90 bg-amber-950/50 px-2.5 py-0.5 rounded border border-amber-500/20 flex items-center gap-1.5">
-                  <span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
-                  {{ uiText().about.ongoingSlotBadge }}
+                <span
+                  class="font-mono text-xs text-emerald-400 bg-emerald-950/80 px-2.5 py-0.5 rounded border border-emerald-500/30 flex items-center gap-1.5">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+                  {{ uiText().about.certBadge }}
                 </span>
-                <span class="font-mono text-[11px] text-slate-500">
-                  Targeted
+                <span class="font-mono text-[11px] text-slate-400">
+                  {{ uiText().about.certDate }}
                 </span>
               </div>
 
-              <h4 class="text-base font-bold text-slate-300">
-                {{ uiText().about.ongoingTitle }}
+              <h4 class="text-base sm:text-lg font-bold text-slate-100">
+                {{ uiText().about.certTitle }}
               </h4>
-              <div class="font-mono text-xs text-slate-500 mb-3">
-                {{ uiText().about.ongoingStatus }}
+              <div class="font-mono text-xs text-cyan-300 mb-3">
+                {{ uiText().about.certIssuer }} — Ton Duc Thang University
               </div>
 
-              <p class="text-slate-500 text-xs leading-relaxed mb-4">
-                {{ uiText().about.ongoingDesc }}
+              <p class="text-slate-400 text-xs leading-relaxed mb-3">
+                {{ uiText().about.certDesc }}
               </p>
 
-              <div class="flex items-center gap-2 text-[11px] font-mono text-slate-600">
-                <span class="inline-block w-2 h-2 rounded-full bg-slate-700"></span>
-                <span>{{ uiText().about.awaitingText }}</span>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="font-mono text-[11px] px-2 py-0.5 rounded bg-slate-950 text-slate-300 border border-slate-800">Agile</span>
+                <span
+                  class="font-mono text-[11px] px-2 py-0.5 rounded bg-slate-950 text-slate-300 border border-slate-800">Scrum</span>
+                <span
+                  class="font-mono text-[11px] px-2 py-0.5 rounded bg-slate-950 text-slate-300 border border-slate-800">Teamwork</span>
               </div>
             </div>
 

@@ -1,6 +1,5 @@
 import { Component, inject, signal } from '@angular/core';
 import { PortfolioService } from '../../core/services/portfolio.service';
-import { Theme } from '../../core/services/theme';
 
 @Component({
   selector: 'app-navbar',
@@ -10,23 +9,21 @@ import { Theme } from '../../core/services/theme';
 })
 export class Navbar {
   readonly portfolioService = inject(PortfolioService);
-  readonly themeService = inject(Theme);
 
   readonly activeSection = this.portfolioService.activeSection;
   readonly mobileMenuOpen = signal(false);
   readonly currentLang = this.portfolioService.currentLang;
-  readonly isDark = this.themeService.isDark;
   readonly uiText = this.portfolioService.uiText;
 
   get navItems() {
     const text = this.uiText().nav;
     return [
-      { id: 'home', label: text.home, num: '01' },
-      { id: 'about', label: text.about, num: '02' },
-      { id: 'skills', label: text.skills, num: '03' },
-      { id: 'experience', label: text.experience, num: '04' },
-      { id: 'projects', label: text.projects, num: '05' },
-      { id: 'contact', label: text.contact, num: '06' },
+      { id: 'home', label: text.home },
+      { id: 'about', label: text.about },
+      { id: 'skills', label: text.skills },
+      { id: 'experience', label: text.experience },
+      { id: 'projects', label: text.projects },
+      { id: 'contact', label: text.contact },
     ];
   }
 
@@ -45,9 +42,5 @@ export class Navbar {
 
   toggleLanguage(): void {
     this.portfolioService.toggleLanguage();
-  }
-
-  toggleTheme(): void {
-    this.themeService.toggleTheme();
   }
 }
